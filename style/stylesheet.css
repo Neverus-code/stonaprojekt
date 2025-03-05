@@ -203,7 +203,7 @@ body {
   }
 
   .tlo-gif {
-    /* background-image: url('../img/papaj.gif');  */
+    background-image: url('../img/papaj.gif'); 
          background-size: cover;
          background-repeat: no-repeat;
          z-index: -1; 
