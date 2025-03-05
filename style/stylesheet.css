@@ -137,33 +137,99 @@ body {
   
 
 
-  .animacja {
+  .animacja-kolor {
     transition: transform 1s ease;
-    animation: anim 1s linear infinite;
+    animation: anim-kolor 1s linear infinite;
+
   }
 
-  @keyframes anim {
+  
+  .animacja-t {
+    transition: transform 1s ease;
+    animation:  anim-t 1s linear infinite;
+
+  }
+
+  .animacja-oba {
+    transition: transform 1s ease;
+    animation:  anim-kolor 1s linear infinite,anim-t 1s linear infinite;
+
+  }
+
+  @keyframes anim-t {
     0% {
-      color:brown;
+
       transform: rotate(0deg) scale(0.5);
     }
     25% {
-      color:rgb(55, 144, 188);
+
       transform: rotate(10deg) scale(1) ;
     }
     50% {
-      color:rgb(188, 55, 141);
+   
       transform: rotate(0deg) scale(0.5);
     }
     75% {
-      color:rgb(188, 146, 55);
+      
       transform: rotate(-10deg) scale(1);
     }
     100% {
-      color:green;
+ 
       transform: rotate(0deg) scale(0.5) ;
     }
   }
+
+  @keyframes anim-kolor {
+    0% {
+      color:brown;
+   
+    }
+    25% {
+      color:rgb(55, 144, 188);
+  
+    }
+    50% {
+      color:rgb(188, 55, 141);
+
+    }
+    75% {
+      color:rgb(188, 146, 55);
+
+    }
+    100% {
+      color:green;
+
+    }
+  }
+
+  .tlo-gif {
+    /* background-image: url('../img/papaj.gif');  */
+         background-size: cover;
+         background-repeat: no-repeat;
+         z-index: -1; 
+          top: 0;
+          left: 0;
+          width: 100%;
+          height:1000px;
+          transition: background-image 0.01s ease-in-out;
+          animation:  pa 1s linear infinite;
+         
+      
+  }
+
+  @keyframes pa {
+    0% {
+      background-image: url('../img/papaj.gif'); 
+   
+    }
+
+    100% {
+      background-image: url('../img/mr.h.gif'); 
+
+    }
+  }
+
+
   
   table {
     width: 100%;
