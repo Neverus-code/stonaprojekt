@@ -203,7 +203,7 @@ body {
   }
 
   .tlo-gif {
-    background-image: url('../img/papaj.gif'); 
+    background-image: '../img/papaj.gif'; 
          background-size: cover;
          background-repeat: no-repeat;
          z-index: -1; 
@@ -219,12 +219,12 @@ body {
 
   @keyframes pa {
     0% {
-      background-image: url('../img/papaj.gif'); 
+      background-image: '../img/papaj.gif'; 
    
     }
 
     100% {
-      background-image: url('../img/mr.h.gif'); 
+      background-image: '../img/mr.h.gif'; 
 
     }
   }
