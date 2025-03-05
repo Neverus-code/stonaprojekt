@@ -1,0 +1,194 @@
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+    user-select: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+
+
+
+.menu-button {
+    transform: translateY(-40px);
+    /* border-radius: 15px; */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(128, 105, 105);
+    transition: transform 0.75s ease;
+}
+
+.menu-button:hover {
+    transform: translateY(-15px);
+
+    outline: 5px solid white;
+    outline-offset: -5px;
+}
+
+.menu-button:active {
+    transform: translateY(-20px);
+    color: #252525;
+    background-color: white;
+    /* outline: 5px solid white;
+    outline-offset: -5px; */
+}
+
+.text-downer {
+    transition: transform 0.5s ease;
+    transform: translateY(-50px);
+}
+
+.menu-button:hover .text-downer {
+    transform: translateY(10px);
+}
+
+.menu-button:active .text-downer {
+    transform: translateY(8px);
+}
+
+
+.test {
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-button:hover .test {
+    /* display: none; */
+    transform: translateY(-50px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* Styl głównego obiektu */
+.object {
+
+    width: 90px;
+    height: 90px;
+    background-color: #3498db;
+    animation: rotate 0.001s linear infinite;
+    position: relative;
+    margin: 50px;
+  }
+  
+  .object:hover {
+    outline: 5px solid rebeccapurple;
+    outline-offset: -5px;
+    animation: none;
+    animation: big 0.75s forwards;
+  }
+  
+  /* Pseudo-elementy */
+  .object::before,
+  .object::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    
+
+   /* background-color: rgba(255, 0, 0, 0.5);  Półprzezroczysty czerwony kolor */
+  }
+  
+  .object::before {
+    top: -10px;
+    left: -10px;
+  }
+  
+  .object::after {
+    bottom: -10px;
+    right: -10px;
+  }
+  
+  .object:hover::before,
+  .object:hover::after {
+    animation: none;
+  
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes big {
+
+    100% {
+        
+        transform: scale(2) rotate(0);
+    }
+    75% {
+        transform: scale(1.5) rotate(10deg);
+    }
+    50% {
+        transform:  scale(1.25) rotate(-10deg);
+        
+    }
+    25% {
+        transform: rotate(10deg);
+    }
+
+  }
+  
+
+
+  .animacja {
+    transition: transform 1s ease;
+    animation: anim 1s linear infinite;
+  }
+
+  @keyframes anim {
+    0% {
+      color:brown;
+      transform: rotate(0deg) scale(0.5);
+    }
+    25% {
+      color:rgb(55, 144, 188);
+      transform: rotate(10deg) scale(1) ;
+    }
+    50% {
+      color:rgb(188, 55, 141);
+      transform: rotate(0deg) scale(0.5);
+    }
+    75% {
+      color:rgb(188, 146, 55);
+      transform: rotate(-10deg) scale(1);
+    }
+    100% {
+      color:green;
+      transform: rotate(0deg) scale(0.5) ;
+    }
+  }
+  
+  table {
+    width: 100%;
+    font-size: 1.5em;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+
+.container {
+  border-radius: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 30px;
+  background-color: #ad6060;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+p {
+  text-align: justify;
+  line-height: 1.6;
+}
