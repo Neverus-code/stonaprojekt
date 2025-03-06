@@ -70,8 +70,8 @@ body {
 /* Styl głównego obiektu */
 .object {
 
-    width: 90px;
-    height: 90px;
+    width: 360px;
+    height: 360px;
     background-color: #3498db;
     animation: rotate 0.001s linear infinite;
     position: relative;
